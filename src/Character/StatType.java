@@ -1,0 +1,5 @@
+package Character;
+
+public enum StatType {
+    SPELL_DAMAGE, STRENGTH, SHADOW_RESISTANCE, AGILITY, STAMINA, INTELLECT, CRIT_CHANCE
+}
