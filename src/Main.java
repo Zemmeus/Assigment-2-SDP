@@ -1,26 +1,30 @@
-import Character.Character;
-import Character.Warlock;
-import Character.Rogue;
-import Character.Warrior;
+import factory.CharacterCreator;
+import factory.RogueCreator;
+import factory.WarlockCreator;
+import factory.WarriorCreator;
+import model.Character;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Main {
     public static void main(String[] args) {
-        Character zemmeusLock = new Warlock("Zemmeus", "Undead", 8, 5, 24, 60);
-        Character zemmeusWarrior = new Warrior("Zemmeus", "Undead", 8, 5, 24, 60);
-        Character zemmeusRogue = new Rogue("Zemmeus", "Undead", 8, 5, 24, 60);
+        System.out.println("=== Factory Method: creators produce characters ===\n");
 
-        List<Character> zemmeusList = new ArrayList<>();
-        zemmeusList.add(zemmeusLock);
-        zemmeusList.add(zemmeusWarrior);
-        zemmeusList.add(zemmeusRogue);
+        List<CharacterCreator> creators = new ArrayList<>();
+        creators.add(new WarlockCreator());
+        creators.add(new WarriorCreator());
+        creators.add(new RogueCreator());
 
-        for (Character character : zemmeusList) {
-            character.useAbility();
+        List<Character> party = new ArrayList<>();
+        for (CharacterCreator creator : creators) {
+            party.add(creator.spawn("Zemmeus", "Undead", 8, 5, 24, 60));
+            System.out.println();
         }
 
+        System.out.println("=== The client never named a concrete class ===\n");
+        for (Character member : party) {
+            System.out.println(member);
+        }
     }
 }

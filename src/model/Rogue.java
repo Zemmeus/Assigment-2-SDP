@@ -1,4 +1,4 @@
-package Character;
+package model;
 
 public class Rogue extends Character{
     public Rogue(String name, String race, int agility, int strength, int intelligence, int level) {

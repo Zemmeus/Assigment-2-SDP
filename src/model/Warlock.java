@@ -1,4 +1,4 @@
-package Character;
+package model;
 
 public class Warlock extends Character{
     public Warlock(String name, String race, int agility, int strength, int intelligence, int level) {

@@ -1,4 +1,4 @@
-package Character;
+package model;
 
 public class ItemModifier {
     private final StatType statType;

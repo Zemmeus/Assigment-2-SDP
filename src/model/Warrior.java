@@ -1,4 +1,4 @@
-package Character;
+package model;
 
 public class Warrior extends Character{
     public Warrior(String name, String race, int agility, int strength, int intelligence, int level) {

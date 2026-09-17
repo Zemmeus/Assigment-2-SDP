@@ -1,4 +1,4 @@
-package Character;
+package model;
 
 public enum EquipmentSlot {
     HEAD(1),
