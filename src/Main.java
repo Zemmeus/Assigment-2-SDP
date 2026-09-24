@@ -1,3 +1,6 @@
+import equipment.Adventurer;
+import equipment.AllianceEquipmentFactory;
+import equipment.HordeEquipmentFactory;
 import factory.CharacterCreator;
 import factory.RogueCreator;
 import factory.WarlockCreator;
@@ -26,5 +29,15 @@ public class Main {
         for (Character member : party) {
             System.out.println(member);
         }
+
+        System.out.println("\n=== Abstract Factory: one factory equips a whole adventurer ===\n");
+
+        Adventurer grommash = new Adventurer("Grommash", new HordeEquipmentFactory());
+        grommash.goToBattle();
+
+        System.out.println();
+
+        Adventurer anduin = new Adventurer("Anduin", new AllianceEquipmentFactory());
+        anduin.goToBattle();
     }
 }
