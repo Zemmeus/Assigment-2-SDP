@@ -12,7 +12,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("=== Factory Method: creators produce characters ===\n");
+        System.out.println("=== Factory Method: creators produce characters ====\n");
 
         List<CharacterCreator> creators = new ArrayList<>();
         creators.add(new WarlockCreator());
